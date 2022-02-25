@@ -4,14 +4,24 @@ import time
 from pynput import mouse
 from pynput.mouse import Listener as MouseListener
 
-from core.app_state import app_state
+from core.app_state import app_state, mouse_state
 from utils.mouse_move import mousemove
 
 
 def on_click(x, y, button, pressed):
-    if button == mouse.Button.left:
+    if app_state.is_paused():
+        return
+
+    if button == mouse.Button.right:
         if pressed:
-            if not app_state.is_running() and not app_state.is_paused():
+            if not mouse_state.is_right_button_pressed():
+                mouse_state.set_right_button_pressed(True)
+        else:
+            mouse_state.set_right_button_pressed(False)
+
+    if button == mouse.Button.left:
+        if pressed and mouse_state.is_right_button_pressed():
+            if not app_state.is_running():
                 app_state.set_running(True)
                 threading.Thread(target=process).start()
         else:
@@ -20,7 +30,7 @@ def on_click(x, y, button, pressed):
 
 def process():
     while app_state.is_running():
-        threading.Thread(target=mousemove, args=[0, 25]).start()
+        threading.Thread(target=mousemove, args=[app_state.x_force, app_state.y_force]).start()
         time.sleep(0.01)
 
 
