@@ -30,7 +30,7 @@ def on_click(x, y, button, pressed):
 
 def process():
     while app_state.is_running():
-        threading.Thread(target=mousemove, args=[app_state.x_force, app_state.y_force]).start()
+        threading.Thread(target=mousemove, args=[app_state.get_forces()['x'], app_state.get_forces()['y']]).start()
         time.sleep(0.01)
 
 

@@ -2,11 +2,16 @@ class AppState:
     __running = False
     __paused = False
 
+    __x_force = 0
+    __y_force = 0
+
     def set_running(self, state):
         self.__running = state
 
     def set_paused(self, state):
         self.__paused = state
+
+        print("paused:", self.is_paused())
 
     def is_running(self):
         return self.__running
@@ -14,8 +19,18 @@ class AppState:
     def is_paused(self):
         return self.__paused
 
-    x_force = 0
-    y_force = 0
+    def set_forces(self, x, y):
+        self.__x_force = x
+        self.__y_force = y
+
+        print("forces:", [x, y])
+
+    def get_forces(self):
+        d = dict()
+        d['x'] = self.__x_force
+        d['y'] = self.__y_force
+
+        return d
 
 
 class MouseState:
