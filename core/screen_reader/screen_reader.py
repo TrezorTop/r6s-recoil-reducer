@@ -7,8 +7,6 @@ from core.json_reader.json_reader import get_in_game_mouse_sensitivity, get_prof
 
 
 def determine_profile():
-    app_data.set_in_game_mouse_sensitivity(int(get_in_game_mouse_sensitivity()))
-
     app_data.set_profile_list(get_profile_list())
 
     user32 = ctypes.windll.user32
@@ -19,7 +17,7 @@ def determine_profile():
     x1 = int(screensize[0])
     y1 = int(screensize[1])
 
-    results = dict(imagesearch_from_folder('./settings/icons_to_search/', 0.8))
+    results = dict(imagesearch_from_folder('./settings/icons_to_search/', 1.2))
 
     for key in results:
         if results[key][0] > -1:

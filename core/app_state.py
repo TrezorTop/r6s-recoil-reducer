@@ -1,3 +1,6 @@
+from core.json_reader.json_reader import get_in_game_mouse_sensitivity
+
+
 class AppState:
     __running = False
     __paused = False
@@ -63,3 +66,4 @@ class MouseState:
 app_state = AppState()
 app_data = AppData()
 mouse_state = MouseState()
+app_data.set_in_game_mouse_sensitivity(int(get_in_game_mouse_sensitivity()))

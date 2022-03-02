@@ -4,6 +4,7 @@ from pynput import keyboard
 from pynput.keyboard import Key
 
 from core.app_state import app_state
+from core.json_reader.json_reader import get_profile
 from core.screen_reader.screen_reader import determine_profile
 
 
@@ -16,15 +17,15 @@ def pause():
 
 
 def set_profile_1():
-    app_state.set_forces([0, 68])
+    app_state.set_forces(get_profile("profile_1"))
 
 
 def set_profile_2():
-    app_state.set_forces([0, 32])
+    app_state.set_forces(get_profile("profile_2"))
 
 
 def set_profile_3():
-    app_state.set_forces([0, 17])
+    app_state.set_forces(get_profile("profile_3"))
 
 
 def initialize_keyboard_hotkeys():
