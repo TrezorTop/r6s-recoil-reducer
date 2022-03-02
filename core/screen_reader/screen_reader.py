@@ -1,4 +1,5 @@
 import ctypes
+import time
 
 from python_imagesearch.imagesearch import region_grabber, imagesearcharea
 
@@ -23,6 +24,7 @@ def determine_profile():
                 element not in {'profile_1', 'profile_2', 'profile_3', 'default'}]:
         res = imagesearcharea('./settings/icons_to_search/' + key + '.png', x0, y0, x1, y1, 0.9, region)
         if res[0] != -1:
+            time.sleep(1000)
             app_state.set_forces(get_profile(key))
             return
 
