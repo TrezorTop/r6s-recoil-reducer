@@ -4,6 +4,7 @@ from pynput import keyboard
 from pynput.keyboard import Key
 
 from core.app_state import app_state
+from core.screen_reader.screen_reader import determine_profile
 
 
 def close_app():
@@ -15,15 +16,15 @@ def pause():
 
 
 def set_profile_1():
-    app_state.set_forces(0, 24)
+    app_state.set_forces([0, 68])
 
 
 def set_profile_2():
-    app_state.set_forces(0, 32)
+    app_state.set_forces([0, 32])
 
 
 def set_profile_3():
-    app_state.set_forces(0, 17)
+    app_state.set_forces([0, 17])
 
 
 def initialize_keyboard_hotkeys():
@@ -46,6 +47,8 @@ def on_press(key):
         set_profile_2()
     if key == Key.f3:
         set_profile_3()
+    if key == Key.f5:
+        determine_profile()
 
 
 keyboard_listener = keyboard.Listener(on_press=on_press)

@@ -19,11 +19,11 @@ class AppState:
     def is_paused(self):
         return self.__paused
 
-    def set_forces(self, x, y):
-        self.__x_force = x
-        self.__y_force = y
+    def set_forces(self, array):
+        self.__x_force = int(array[0] / app_data.get_in_game_mouse_sensitivity())
+        self.__y_force = int(array[1] / app_data.get_in_game_mouse_sensitivity())
 
-        print("forces:", [x, y])
+        print("forces:", array)
 
     def get_forces(self):
         d = dict()
@@ -31,6 +31,23 @@ class AppState:
         d['y'] = self.__y_force
 
         return d
+
+
+class AppData:
+    __profile_list = []
+    __in_game_mouse_sensitivity = 1
+
+    def get_in_game_mouse_sensitivity(self):
+        return self.__in_game_mouse_sensitivity
+
+    def set_in_game_mouse_sensitivity(self, value):
+        self.__in_game_mouse_sensitivity = value
+
+    def set_profile_list(self, profile_list):
+        self.__profile_list = profile_list
+
+    def get_profile_list(self):
+        return self.__profile_list
 
 
 class MouseState:
@@ -44,4 +61,5 @@ class MouseState:
 
 
 app_state = AppState()
+app_data = AppData()
 mouse_state = MouseState()

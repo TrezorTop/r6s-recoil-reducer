@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "in_game_mouse_sensitivity": 4
+  },
+  "profiles": {
+    "m762": {
+      "x": 10,
+      "y": 190
+    },
+    "spear308": {
+      "x": 10,
+      "y": 90
+    },
+    "profile_1": {
+      "x": 0,
+      "y": 68
+    },
+    "profile_2": {
+      "x": 0,
+      "y": 32
+    },
+    "profile_3": {
+      "x": 0,
+      "y": 17
+    }
+  }
+}
