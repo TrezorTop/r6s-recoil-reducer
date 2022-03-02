@@ -3,9 +3,13 @@
     "in_game_mouse_sensitivity": 4
   },
   "profiles": {
+    "scorpion": {
+      "x": 0,
+      "y": 100
+    },
     "m762": {
-      "x": 10,
-      "y": 190
+      "x": 15,
+      "y": 180
     },
     "spear308": {
       "x": 0,
