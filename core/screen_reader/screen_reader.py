@@ -1,9 +1,9 @@
 import ctypes
 
-from python_imagesearch.imagesearch import imagesearch_from_folder, region_grabber, imagesearcharea
+from python_imagesearch.imagesearch import region_grabber, imagesearcharea
 
 from core.app_state import app_data, app_state
-from core.json_reader.json_reader import get_in_game_mouse_sensitivity, get_profile_list, get_profile
+from core.json_reader.json_reader import get_profile_list, get_profile
 
 
 def determine_profile():
@@ -19,14 +19,12 @@ def determine_profile():
 
     region = region_grabber((x0, y0, x1, y1))
 
-    # results = dict(imagesearch_from_folder('./settings/icons_to_search/', 0.9))
-
     for key in [element for element in app_data.get_profile_list() if
-                element not in {'profile_1', 'profile_2', 'profile_3', }]:
+                element not in {'profile_1', 'profile_2', 'profile_3', 'default'}]:
         res = imagesearcharea('./settings/icons_to_search/' + key + '.png', x0, y0, x1, y1, 0.9, region)
         if res[0] != -1:
             app_state.set_forces(get_profile(key))
             return
 
-    print("nothing found, setting profile_1")
-    app_state.set_forces(get_profile("profile_1"))
+    print("nothing found, setting default")
+    app_state.set_forces(get_profile("default"))
