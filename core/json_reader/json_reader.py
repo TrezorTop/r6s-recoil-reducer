@@ -3,6 +3,7 @@ import json
 
 def get_profile(key):
     with open('./settings/settings.json') as json_file:
+        print("Profile:", key)
         data = json.load(json_file)
 
         return [data['profiles'][key]['x'], data['profiles'][key]['y']]
