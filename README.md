@@ -1,2 +1,2 @@
-# r6s recoil reducer
+# Recoil reducer
  
