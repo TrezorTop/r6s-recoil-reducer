@@ -6,7 +6,12 @@ def get_profile(key):
         print("Profile:", key)
         data = json.load(json_file)
 
-        return [data['profiles'][key]['x'], data['profiles'][key]['y']]
+        return [
+            data['profiles'][key]['x'],
+            data['profiles'][key]['y'],
+            data['profiles'][key]['x_delay'],
+            data['profiles'][key]['y_delay']
+        ]
 
 
 def get_in_game_mouse_sensitivity():

@@ -1,12 +1,45 @@
+import ctypes
+
+from python_imagesearch.imagesearch import region_grabber
+
 from core.json_reader.json_reader import get_in_game_mouse_sensitivity
 
 
 class AppState:
+    def __init__(self):
+        pass
+
+    __screensize = ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1)
+
+    __x0 = int(__screensize[0] - __screensize[0] / 3)
+    __y0 = int(__screensize[1] - __screensize[1] / 3)
+    __x1 = int(__screensize[0])
+    __y1 = int(__screensize[1])
+
+    __region = region_grabber((__x0, __y0, __x1, __y1))
+
     __running = False
     __paused = False
 
     __x_force = 0
     __y_force = 0
+
+    __x_force_delay = 0
+    __y_force_delay = 0
+
+    __x_force_delayed = True
+    __y_force_delayed = False
+
+    def get_screen_rectangle(self):
+        d = dict()
+
+        d['x0'] = self.__x0
+        d['y0'] = self.__y0
+        d['x1'] = self.__x1
+        d['y1'] = self.__y1
+        d['region'] = self.__region
+
+        return d
 
     def set_running(self, state):
         self.__running = state
@@ -26,12 +59,33 @@ class AppState:
         self.__x_force = int(array[0] / app_data.get_in_game_mouse_sensitivity())
         self.__y_force = int(array[1] / app_data.get_in_game_mouse_sensitivity())
 
+        self.__x_force_delay = array[2]
+        self.__y_force_delay = array[3]
+
         print("forces:", array)
 
     def get_forces(self):
         d = dict()
-        d['x'] = self.__x_force
-        d['y'] = self.__y_force
+
+        d['x'] = 0 if self.__x_force_delayed else self.__x_force
+        d['y'] = 0 if self.__y_force_delayed else self.__y_force
+
+        return d
+
+    def set_forces_delay(self, array):
+        self.__x_force_delay = array[0]
+        self.__y_force_delay = array[1]
+
+        print("forces delay:", array)
+
+    def set_forces_delay_state(self, array):
+        self.__x_force_delayed = array[0]
+        self.__y_force_delayed = array[1]
+
+    def get_forces_delay(self):
+        d = dict()
+        d['x'] = self.__x_force_delay
+        d['y'] = self.__y_force_delay
 
         return d
 

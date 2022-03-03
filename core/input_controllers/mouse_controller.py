@@ -9,6 +9,8 @@ from utils.mouse_move import mousemove
 
 
 def on_click(x, y, button, pressed):
+    app_state.set_forces_delay_state([True, False])
+
     if app_state.is_paused():
         return
 
@@ -24,6 +26,10 @@ def on_click(x, y, button, pressed):
             if not app_state.is_running():
                 app_state.set_running(True)
                 threading.Thread(target=process).start()
+                threading.Thread(
+                    target=delay,
+                    args=[app_state.get_forces_delay()['x'], app_state.get_forces_delay()['y']]
+                ).start()
         else:
             app_state.set_running(False)
 
@@ -32,6 +38,11 @@ def process():
     while app_state.is_running():
         threading.Thread(target=mousemove, args=[app_state.get_forces()['x'], app_state.get_forces()['y']]).start()
         time.sleep(0.01)
+
+
+def delay(x_delay, y_delay):
+    time.sleep(x_delay)
+    app_state.set_forces_delay_state([False, False])
 
 
 mouse_listener = MouseListener(on_click=on_click)

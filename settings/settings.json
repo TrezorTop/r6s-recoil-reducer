@@ -5,67 +5,99 @@
   "profiles": {
     "scorpion": {
       "x": 0,
-      "y": 120
+      "y": 120,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "m762": {
       "x": 20,
-      "y": 180
+      "y": 180,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "m4": {
       "x": -10,
-      "y": 110
+      "y": 110,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "556xi": {
       "x": 10,
-      "y": 110
+      "y": 110,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "sa58": {
       "x": -4,
-      "y": 80
+      "y": 80,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "spear308": {
       "x": -3,
-      "y": 70
+      "y": 70,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "type89": {
       "x": -10,
-      "y": 110
+      "y": 110,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "v308": {
       "x": 0,
-      "y": 110
+      "y": 110,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "ar33": {
       "x": -7,
-      "y": 125
+      "y": 125,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "k7": {
       "x": -10,
-      "y": 110
+      "y": 110,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "smg12": {
       "x": 60,
-      "y": 220
+      "y": 220,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "vector": {
       "x": 0,
-      "y": 110
+      "y": 110,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "profile_1": {
-      "x": 0,
-      "y": 70
+      "x": 25,
+      "y": 70,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "profile_2": {
       "x": 0,
-      "y": 115
+      "y": 115,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "profile_3": {
       "x": 0,
-      "y": 55
+      "y": 55,
+      "x_delay": 0,
+      "y_delay": 0
     },
     "default": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "x_delay": 0,
+      "y_delay": 0
     }
   }
 }
