@@ -34,8 +34,8 @@ def initialize_keyboard_hotkeys():
                 '<ctrl>+1': pause,
 
                 'm+0': close_app,
-                '1': determine_profile,
-                '2': determine_profile,
+                # '1': determine_profile,
+                # '2': determine_profile,
             }) as h:
         h.join()
 

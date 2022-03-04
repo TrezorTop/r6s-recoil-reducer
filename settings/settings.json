@@ -5,14 +5,26 @@
   "profiles": {
     "scorpion": {
       "x": 0,
-      "y": 120,
+      "y": 127,
       "x_delay": 0,
       "y_delay": 0
     },
     "m762": {
-      "x": 20,
-      "y": 180,
-      "x_delay": 0,
+      "x": 35,
+      "y": 217,
+      "x_delay": 0.2,
+      "y_delay": 0
+    },
+    "r4c": {
+      "x": -16,
+      "y": 165,
+      "x_delay": 0.1,
+      "y_delay": 0
+    },
+    "mx4": {
+      "x": 0,
+      "y": 155,
+      "x_delay": 0.1,
       "y_delay": 0
     },
     "m4": {
@@ -75,8 +87,32 @@
       "x_delay": 0,
       "y_delay": 0
     },
+    "g33": {
+      "x": -10,
+      "y": 118,
+      "x_delay": 0,
+      "y_delay": 0
+    },
+    "mp7": {
+      "x": 0,
+      "y": 90,
+      "x_delay": 0,
+      "y_delay": 0
+    },
+    "t95": {
+      "x": 0,
+      "y": 100,
+      "x_delay": 0,
+      "y_delay": 0
+    },
+    "mp5": {
+      "x": -8,
+      "y": 50,
+      "x_delay": 0,
+      "y_delay": 0
+    },
     "profile_1": {
-      "x": 25,
+      "x": 0,
       "y": 70,
       "x_delay": 0,
       "y_delay": 0

@@ -5,10 +5,15 @@ from pynput import mouse
 from pynput.mouse import Listener as MouseListener
 
 from core.app_state import app_state, mouse_state
+from core.screen_reader.screen_reader import determine_profile
 from utils.mouse_move import mousemove
 
 
 def on_click(x, y, button, pressed):
+    if button == mouse.Button.x1:
+        if pressed:
+            determine_profile()
+
     app_state.set_forces_delay_state([True, False])
 
     if app_state.is_paused():

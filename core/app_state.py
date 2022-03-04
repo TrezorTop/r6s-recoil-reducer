@@ -1,23 +1,7 @@
-import ctypes
-
-from python_imagesearch.imagesearch import region_grabber
-
 from core.json_reader.json_reader import get_in_game_mouse_sensitivity
 
 
 class AppState:
-    def __init__(self):
-        pass
-
-    __screensize = ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1)
-
-    __x0 = int(__screensize[0] - __screensize[0] / 3)
-    __y0 = int(__screensize[1] - __screensize[1] / 3)
-    __x1 = int(__screensize[0])
-    __y1 = int(__screensize[1])
-
-    __region = region_grabber((__x0, __y0, __x1, __y1))
-
     __running = False
     __paused = False
 
@@ -29,17 +13,6 @@ class AppState:
 
     __x_force_delayed = True
     __y_force_delayed = False
-
-    def get_screen_rectangle(self):
-        d = dict()
-
-        d['x0'] = self.__x0
-        d['y0'] = self.__y0
-        d['x1'] = self.__x1
-        d['y1'] = self.__y1
-        d['region'] = self.__region
-
-        return d
 
     def set_running(self, state):
         self.__running = state

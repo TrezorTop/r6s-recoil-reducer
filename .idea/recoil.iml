@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/dist" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (python-recoil-reducer)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (recoil)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
