@@ -5,6 +5,8 @@ class AppState:
     __running = False
     __paused = False
 
+    __auto_click = False
+
     __x_force = 0
     __y_force = 0
 
@@ -13,6 +15,12 @@ class AppState:
 
     __x_force_delayed = True
     __y_force_delayed = False
+
+    def set_auto_click(self, state):
+        self.__auto_click = state
+
+    def get_auto_click(self):
+        return self.__auto_click
 
     def set_running(self, state):
         self.__running = state
@@ -34,6 +42,8 @@ class AppState:
 
         self.__x_force_delay = array[2]
         self.__y_force_delay = array[3]
+
+        self.__auto_click = array[4]
 
         print("forces:", array)
 

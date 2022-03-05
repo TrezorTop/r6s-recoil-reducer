@@ -6,7 +6,7 @@ from pynput.mouse import Listener as MouseListener
 
 from core.app_state import app_state, mouse_state
 from core.screen_reader.screen_reader import determine_profile
-from utils.mouse_move import mousemove
+from utils.mouse_control import control_mouse
 
 
 def on_click(x, y, button, pressed):
@@ -41,7 +41,7 @@ def on_click(x, y, button, pressed):
 
 def process():
     while app_state.is_running():
-        threading.Thread(target=mousemove, args=[app_state.get_forces()['x'], app_state.get_forces()['y']]).start()
+        threading.Thread(target=control_mouse).start()
         time.sleep(0.01)
 
 

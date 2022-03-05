@@ -10,7 +10,8 @@ def get_profile(key):
             data['profiles'][key]['x'],
             data['profiles'][key]['y'],
             data['profiles'][key]['x_delay'],
-            data['profiles'][key]['y_delay']
+            data['profiles'][key]['y_delay'],
+            data['profiles'][key]['auto_click']
         ]
 
 

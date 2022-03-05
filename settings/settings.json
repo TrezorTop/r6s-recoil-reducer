@@ -7,133 +7,162 @@
       "x": 0,
       "y": 127,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
+    },
+    "mk14ebr": {
+      "x": -15,
+      "y": 215,
+      "x_delay": 0,
+      "y_delay": 0,
+      "auto_click": false
     },
     "m762": {
       "x": 35,
       "y": 212,
       "x_delay": 0.2,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "r4c": {
       "x": -15,
       "y": 137,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "mx4": {
       "x": 0,
       "y": 155,
       "x_delay": 0.1,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "m4": {
       "x": -10,
       "y": 110,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "556xi": {
       "x": 10,
       "y": 110,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "sa58": {
       "x": -4,
       "y": 80,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "spear308": {
       "x": -3,
       "y": 70,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "type89": {
       "x": -10,
       "y": 110,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "v308": {
       "x": 0,
       "y": 110,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "ar33": {
       "x": -7,
       "y": 125,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "k7": {
       "x": -10,
       "y": 115,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "smg12": {
-      "x": 60,
-      "y": 220,
+      "x": 70,
+      "y": 225,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "vector": {
       "x": 0,
       "y": 110,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "g33": {
       "x": -10,
       "y": 118,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "mp7": {
       "x": 0,
       "y": 90,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "t95": {
       "x": 0,
       "y": 100,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "mp5": {
       "x": -8,
       "y": 50,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "profile_1": {
       "x": 0,
       "y": 70,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "profile_2": {
       "x": 0,
       "y": 115,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "profile_3": {
       "x": 0,
       "y": 55,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     },
     "default": {
       "x": 0,
       "y": 0,
       "x_delay": 0,
-      "y_delay": 0
+      "y_delay": 0,
+      "auto_click": false
     }
   }
 }
