@@ -1,11 +1,9 @@
 from core.json_reader.json_reader import get_in_game_mouse_sensitivity
 
 
-class AppState:
+class AppCondition:
     __running = False
     __paused = False
-
-    __auto_click = False
 
     __x_force = 0
     __y_force = 0
@@ -15,12 +13,6 @@ class AppState:
 
     __x_force_delayed = True
     __y_force_delayed = False
-
-    def set_auto_click(self, state):
-        self.__auto_click = state
-
-    def get_auto_click(self):
-        return self.__auto_click
 
     def set_running(self, state):
         self.__running = state
@@ -35,17 +27,6 @@ class AppState:
 
     def is_paused(self):
         return self.__paused
-
-    def set_forces(self, array):
-        self.__x_force = int(array[0] / app_data.get_in_game_mouse_sensitivity())
-        self.__y_force = int(array[1] / app_data.get_in_game_mouse_sensitivity())
-
-        self.__x_force_delay = array[2]
-        self.__y_force_delay = array[3]
-
-        self.__auto_click = array[4]
-
-        print("forces:", array)
 
     def get_forces(self):
         d = dict()
@@ -100,7 +81,17 @@ class MouseState:
         return self.__right_button_pressed
 
 
+class AppState(AppCondition, AppData, MouseState):
+    def set_forces(self, array):
+        self.__x_force = int(array[0] / self.get_in_game_mouse_sensitivity())
+        self.__y_force = int(array[1] / self.get_in_game_mouse_sensitivity())
+
+        self.__x_force_delay = array[2]
+        self.__y_force_delay = array[3]
+
+        print("forces:", array)
+
+
 app_state = AppState()
-app_data = AppData()
-mouse_state = MouseState()
-app_data.set_in_game_mouse_sensitivity(int(get_in_game_mouse_sensitivity()))
+
+app_state.set_in_game_mouse_sensitivity(int(get_in_game_mouse_sensitivity()))

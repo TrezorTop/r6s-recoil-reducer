@@ -4,7 +4,7 @@ import time
 from pynput import mouse
 from pynput.mouse import Listener as MouseListener
 
-from core.app_state import app_state, mouse_state
+from core.app_state import app_state
 from core.screen_reader.screen_reader import determine_profile
 from utils.mouse_control import control_mouse
 
@@ -21,13 +21,13 @@ def on_click(x, y, button, pressed):
 
     if button == mouse.Button.right:
         if pressed:
-            if not mouse_state.is_right_button_pressed():
-                mouse_state.set_right_button_pressed(True)
+            if not app_state.is_right_button_pressed():
+                app_state.set_right_button_pressed(True)
         else:
-            mouse_state.set_right_button_pressed(False)
+            app_state.set_right_button_pressed(False)
 
     if button == mouse.Button.left:
-        if pressed and mouse_state.is_right_button_pressed():
+        if pressed and app_state.is_right_button_pressed():
             if not app_state.is_running():
                 app_state.set_running(True)
                 threading.Thread(target=process).start()

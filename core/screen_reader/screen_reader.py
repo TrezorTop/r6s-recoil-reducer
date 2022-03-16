@@ -2,12 +2,12 @@ import ctypes
 
 from python_imagesearch.imagesearch import imagesearcharea, region_grabber
 
-from core.app_state import app_data, app_state
+from core.app_state import app_state
 from core.json_reader.json_reader import get_profile_list, get_profile
 
 
 def determine_profile():
-    app_data.set_profile_list(get_profile_list())\
+    app_state.set_profile_list(get_profile_list())
 
     __screensize = ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1)
 
@@ -18,7 +18,7 @@ def determine_profile():
 
     region = region_grabber((x0, y0, x1, y1))
 
-    for key in [element for element in app_data.get_profile_list() if
+    for key in [element for element in app_state.get_profile_list() if
                 element not in {'profile_1', 'profile_2', 'profile_3', 'default'}]:
         try:
             res = imagesearcharea(
