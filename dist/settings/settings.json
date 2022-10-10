@@ -3,27 +3,33 @@
     "in_game_mouse_sensitivity": 4
   },
   "profiles": {
-    "scorpion": {
+    "pof9": {
       "x": 0,
-      "y": 127,
+      "y": 185,
       "x_delay": 0,
       "y_delay": 0
     },
+    "scorpion": {
+      "x": 50,
+      "y": 155,
+      "x_delay": 0.2,
+      "y_delay": 0.1
+    },
     "mk14ebr": {
       "x": -15,
-      "y": 215,
+      "y": 190,
       "x_delay": 0,
       "y_delay": 0
     },
     "m762": {
-      "x": 35,
-      "y": 212,
-      "x_delay": 0.2,
+      "x": 7,
+      "y": 203,
+      "x_delay": 0,
       "y_delay": 0
     },
     "r4c": {
       "x": -15,
-      "y": 137,
+      "y": 158,
       "x_delay": 0,
       "y_delay": 0
     },
@@ -32,17 +38,16 @@
       "y": 155,
       "x_delay": 0.1,
       "y_delay": 0
-      
     },
     "m4": {
-      "x": -10,
-      "y": 110,
+      "x": -5,
+      "y": 165,
       "x_delay": 0,
       "y_delay": 0
     },
     "556xi": {
-      "x": 10,
-      "y": 110,
+      "x": 30,
+      "y": 155,
       "x_delay": 0,
       "y_delay": 0
     },
@@ -60,7 +65,7 @@
     },
     "type89": {
       "x": -10,
-      "y": 110,
+      "y": 230,
       "x_delay": 0,
       "y_delay": 0
     },
@@ -78,19 +83,19 @@
     },
     "k7": {
       "x": -10,
-      "y": 115,
+      "y": 165,
       "x_delay": 0,
       "y_delay": 0
     },
     "smg12": {
-      "x": 70,
+      "x": 40,
       "y": 225,
       "x_delay": 0,
       "y_delay": 0
     },
     "vector": {
       "x": 0,
-      "y": 110,
+      "y": 165,
       "x_delay": 0,
       "y_delay": 0
     },
@@ -102,7 +107,7 @@
     },
     "mp7": {
       "x": 0,
-      "y": 90,
+      "y": 140,
       "x_delay": 0,
       "y_delay": 0
     },
