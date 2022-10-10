@@ -5,5 +5,11 @@
 ## Building
 
 ```bash
+>  pip install -r requirements.txt
+```
+
+```bash
 >  pyinstaller main.spec
 ```
+
+Then open `dist` folder
