@@ -9,7 +9,7 @@
 ```
 
 ```bash
->  python -m PyInstaller main.spec
+>  python -m PyInstaller --hidden-import=pywintypes --add-data="./settings;settings" main.py
 ```
 
 Then open `dist` folder
