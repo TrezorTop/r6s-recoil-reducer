@@ -9,7 +9,7 @@
 ```
 
 ```bash
->  pyinstaller main.spec
+>  python -m PyInstaller main.spec
 ```
 
 Then open `dist` folder
