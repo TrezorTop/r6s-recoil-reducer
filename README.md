@@ -5,11 +5,11 @@
 ## Building
 
 ```bash
->  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ```bash
->  python -m PyInstaller --onefile --hidden-import=pywintypes --add-data="./settings;settings" main.py
+python -m PyInstaller --onefile --hidden-import=pywintypes --add-data="./settings;settings" main.py
 ```
 
 Then open `dist` folder
