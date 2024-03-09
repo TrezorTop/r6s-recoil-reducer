@@ -41,8 +41,8 @@ def on_click(x, y, button, pressed):
 
 def process():
     while app_state.is_running():
-        threading.Thread(target=control_mouse).start()
         time.sleep(0.01)
+        threading.Thread(target=control_mouse).start()
 
 
 def delay(x_delay, y_delay):
