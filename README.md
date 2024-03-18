@@ -1,6 +1,3 @@
-Sure, here's a basic README for your project:
-
-```markdown
 # Recoil Reducer
 
 Recoil Reducer is a Python application that helps you manage recoil in shooter games. It uses the win32api for mouse manipulations.
